@@ -5,6 +5,7 @@
   grid-auto-rows: auto;
   box-sizing: border-box;
   width: 90%;
+  max-width: 1280px;
   margin: 0 auto;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -91,9 +92,9 @@
 }
 
 #tribute-info>section {
+  padding: 15px 0;
   height: auto;
   width: 100%;
-  padding: 15px 0;
 }
 
 #tribute-info .header {
@@ -103,15 +104,17 @@
 
 #tribute-info p {
   text-align: justify;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 #tribute-link, #tribute-link:active {
   text-decoration: none;
-  color: #FFB100;
+  color: #FF0000;
 }
 
 #tribute-link:hover {
-  color: rgb(76, 0, 255);
+  color: #FFB100;
 }
 
 #tribute-info>section {
@@ -124,6 +127,7 @@
   margin: 0;
   padding: 0;
   position: relative;
+  font-size: 1.15rem;
 }
 
 #tribute-info .header>h2::before {
@@ -141,13 +145,59 @@
   position: absolute;
   height: 35px;
   width: 35px;
-  left: 115px;
+  left: 128px;
   top: -10px;
   background-image: url(/images/dwb_logo_small.png);
 }
 
+a[href^="http://www.doctors"], a[href^="https://www.doctors"] {
+  text-decoration: none;
+  font-weight: bold;
+  color: #FF0000;
+}
+
+a[href^="http://"]:hover, a[href^="https://"]:hover {
+  font-weight: bold;
+  color: #FFB100;
+}
+
+#tribute-info blockquote, #tribute-info>section:last-of-type>p {
+  color: #363636;
+  margin: 0;
+  padding: 0;
+}
+
+#tribute-info>section:last-of-type>p {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  padding-right: 15px;
+  text-align: right;
+  width: 100%;
+}
+
+#tribute-info blockquote {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 footer {
+  margin-top: 15px;
+  display: grid;
   grid-column: 1 / -1;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+footer p {
+  display: block;
+  font-size: 0.7rem;
+  text-align: center;
+  margin: 5px 0;
 }
 
 @media (min-width: 500px) {
