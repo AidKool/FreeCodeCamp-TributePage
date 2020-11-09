@@ -19,16 +19,15 @@
   grid-column: 1/ -1;
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-auto-rows: flow;
+  grid-auto-rows: auto;
 }
 
 #title {
-  grid-column: 2 / span 1;
-  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin: 0;
 }
 
 #title>h1 {
@@ -41,7 +40,7 @@
 
 #title>p {
   font-size: 0.75rem;
-  text-align: center;
+  text-align: left;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -69,6 +68,7 @@
 }
 
 .content {
+  margin-top: 10px;
   grid-column: 1 / -1;
 }
 
@@ -83,19 +83,13 @@
 #tribute-info {
   width: 100%;
   height: auto;
-  padding: 0 15px;
+  padding: 0;
   background: #FFFFFF;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-}
-
-#tribute-info>section {
-  padding: 15px 0;
-  height: auto;
-  width: 100%;
 }
 
 #tribute-info .header {
@@ -122,6 +116,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: auto;
+  width: 100%;
+  margin: 20px 0;
+}
+
+#tribute-info>section>p:last-of-type {
+  text-align: center;
 }
 
 #tribute-info .header>h2 {
@@ -162,13 +163,23 @@ a[href^="http://"]:hover, a[href^="https://"]:hover {
   color: #FFB100;
 }
 
-#tribute-info blockquote, #tribute-info>section:last-of-type>p {
+#quote {
+  padding-bottom: 25px;
+}
+
+#quote>blockquote, #quote>p {
   color: #363636;
   margin: 0;
   padding: 0;
 }
 
-#tribute-info>section:last-of-type>p {
+#quote blockquote {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#quote>p {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
@@ -177,12 +188,6 @@ a[href^="http://"]:hover, a[href^="https://"]:hover {
   padding-right: 15px;
   text-align: right;
   width: 100%;
-}
-
-#tribute-info blockquote {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.5rem;
-  text-align: center;
 }
 
 footer {
@@ -207,5 +212,22 @@ footer p {
   }
   #title>p {
     font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #tribute-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: #FFFFFF;
+  }
+  #tribute-info>section:first-child {
+    padding-left: 0px;
+    padding-right: 25px;
+  }
+  #tribute-info>section:last-child {
+    padding-right: 0px;
+    padding-left: 25px;
   }
 }
