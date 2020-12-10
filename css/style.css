@@ -139,7 +139,7 @@
   width: 35px;
   left: -50px;
   top: -10px;
-  background-image: url(/images/dwb_logo_small.png);
+  background-image: url(../images/dwb_logo_small.png);
 }
 
 #tribute-info .header>h2::after {
@@ -149,7 +149,7 @@
   width: 35px;
   left: 128px;
   top: -10px;
-  background-image: url(/images/dwb_logo_small.png);
+  background-image: url(../images/dwb_logo_small.png);
 }
 
 a[href^="http://www.doctors"], a[href^="https://www.doctors"] {
